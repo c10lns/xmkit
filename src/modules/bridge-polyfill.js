@@ -52,15 +52,6 @@ let platformLaunchH5 = function(param){
 }
 
 /**
- * TODO 非app时跳转登录
- */
-let platformGotoLoginH5 = function(){
-    let htmlUrl = location.origin + '/fanli_service/pages/sdk_campaign/login/index.jsp';
-    htmlUrl = changeUrl(['prd_id', 'channel', 'shownav'], htmlUrl);
-    window.location.href = htmlUrl;
-}
-
-/**
  * 非app时初始化phead，
  */
 let initPheadForH5 = function() {
@@ -125,7 +116,6 @@ let bridgePolyfill = function(currentPhead) {
     } else {
         //重写platform_launch方法兼容其他浏览器打开
         window.platform_launch = platformLaunchH5;
-        window.platform_gotoLogin = platformGotoLoginH5;
         initPheadForH5();
     }
 }
