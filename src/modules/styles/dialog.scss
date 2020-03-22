@@ -1,0 +1,90 @@
+.xm-dialog {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    font-size: 16px;
+
+    .xm-dialog-bg {
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+    }
+
+    .xm-dialog-cont {
+        border-radius: 0.25rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        left: 8.5%;
+        width: 83%;
+        position: fixed;
+        background: white;
+
+        .xm-title-cont {
+            height: 53px;
+            position: relative;
+
+            p.xm-title {
+                line-height:  53px;
+                color: #313131;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            i.xm-close {
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAM1BMVEUAAACQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJA9S2WOAAAAEHRSTlMABQm3srnHfHW/qEM9OkJBWccfCAAAANFJREFUSMed1EsOwyAQBNHgdgDny/1Pm8GKxKIXlQkrkF6tLPflj/O8Hb0wK123x+lHnL2g36ebxbxwUb4srsdYBflR497GKsiPNh9aBfnrSbZVkN/iZQV4K8B7Qd4L8l6Q94K8F+i9cA+FeSzMQ6FingrzVLBfhXsu3HPB3r7vUEl4K9ivgr0XvA+yAv73zQraByvAW5HZK6X3Sum9UnqvlN4rpfdK6b1Seq/Ee+WFey56Zq96PI7MXtW475m92uP6zuzVfV5fqu2Xn71VhU+fD8TBJ4K6/e26AAAAAElFTkSuQmCC');
+                background-size: cover;
+                top: 50%;
+                right: 18px;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+            }
+        }
+
+        .xm-title-divider {
+            background: #60AAFC;
+        }
+
+        .xm-content {
+            padding: 16px;
+            color: #434343;
+            font-size: 14px;
+
+            p {
+                padding-bottom: 8px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .xm-btn-cont {
+            padding: 0 16px 16px;
+
+            .xm-btn {
+                border-radius: 2px;
+                width: 100%;
+                height: 40px;
+                font-size: 16px;
+                text-align: center;
+                background: transparent;
+
+                &.xm-btn-blue {
+                    color: #fff;
+                    background: #008DDB;
+                }
+            }
+        }
+    }
+}

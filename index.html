@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xmkit test</title>
+    <link rel="stylesheet" href="./dist/xmkit.0.1.17.css">
+</head>
+
+<body>
+    <!--等比布局及水平、垂直居中-->
+    <div class="flex-cont">
+        <div class="flex-item relative" style="height:100px; border: 1px solid #333">
+            <p>a</p>
+        </div>
+        <div class="flex-item relative" style="height:100px; border: 1px solid #333">
+            <p class="abs-v-center">a</p>
+        </div>
+        <div class="flex-item relative" style="height:100px; border: 1px solid #333">
+            <p class="abs-h-center">a</p>
+        </div>
+        <div class="flex-item relative" style="height:100px; border: 1px solid #333">
+            <p class="abs-center">a</p>
+        </div>
+    </div>
+    <div id="JbtnA">show toast(click once)</div>
+    <div id="show-dialog">show dialog</div>
+
+    <!--Toast-->
+    <div class="xm-toast">
+        <div></div>
+    </div>
+
+    <!--Loading-->
+    <div class="xm-loading">
+        <div class="xm-loading-wrapper">
+            <img class="xm-loading-rotate" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAtFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////oK74hAAAAPHRSTlMAEgQK/gcuGQ4dT/nyrdbM26JVJYOnfinRx5BnQzoh7nWVNrJwMvbq414W4L5iwrpKP0fni1mHnZlrebcrr0AtAAAE00lEQVRYw63Za3eaQBCA4VkoNysSQYWoEEVtvd+ixqT//391dnc2Uo9NUPYNybc8zpllTz4ESmYARH79x89FsG63ZrYBOjJkEL/8UP38WV92cqOia2GS9iVLNjYd7iq4JsLKrn+6KIt+/UrG7iOwZZpKVrSySf+F/T7N74dlF7qwEBqaV6//bpl3rcJ1LzTh8cv10GTXn47lZdPFrseG2K8rXEY05nsld+GKTIHT0CAzWJYeO/6iIMumYamRGWNucWxyi2U9v16QX7Cu9a3sMozGJvdm7mqt6Bdhb+bfnB+6ZBP8RXm7TlPzfgdRKZlx2oDvmmwI5vRLw/5KnjOVa0CZjos6ydhT/IWMSdmEkrGmlIWdOHC7+UW2oHy9V5Rlr8/s9uc7c4UbcE+TBs4s5NfX0a1fdR2M6yTfURYImNOvrRt30JEhDXc3X3JaNN3DVYZDofxAbC1nnk6nDe/6cz2PaAMeyUnkzIi34Z9MDxO4AY9lT7ksCqGY45FtwqOtptQiKCLMoxg83lnC08ViUDhDL8vk1FAhN+Eyr8EuQ2dEm1ClGsqyDqgymTeHarUl/LRI3M+hKasiPZHw09NTD2S46YjLDlStibJoQ+90xEPcrEznKMtyeREjmQfV8xXdAl5EuRroUNHPBt9HTDRoyGwg22jgM+H7iOM4Qt4BHQ0FjI35+xHLmBY6bFBNAIgpQwvtKDowwLLj2EY5Aj0tpZw0YmC2bXPb00R3JZwkNXBs2VwTPUY14fQYPKKZJrqWUCeIiDY10baimxATbWmivSQJEv49AnsywWdiG5poN0A3CJJgibQMNGUE1BommmkIVJzO8dE7NdE5hj/07Tp4Dvj3GuxcZmminWdq80lre68V3YY4T3P+ME10X9FniFKZp4leKboDHtGxJrq1Xj/zr+cZMKJzTbS/pnZgcneHWVrk+VqVAaArcrTQ2+VyKeSNAWATbetZNdKIL9ddAMh2lKFBNjdLasVv5m7XFzk69rFRtg1Y2pflGujhBuO6D7yoT7HKsi1lfMbAY8Ld7/eT6of4Z0M4vRSpkLGqY0d/MKE3QZYhLKq67RPCEg9BZgh6izmV5HQ0Its3gYqFjPWNCrLZHGFC74HKQphXq1U5yQG6EvcLhxZLGfMevy2+L+HRaAWXjL6UMfagnLV9tEVNEwp5NdXWfEhmZ5QJ78M/5cINa2G4tx6Q3UO7rezW9fFupR0+ZLunNibt5hyucsTMort3wg5ClvaNe2cTHB6Pd55l1m022yKUV3CjPsm8CMrXf2siTXOfDLiRtVXybDYr/VfY7HFZjT104WZujWReycHT7hvSyj47/z2OGsJEr1bb+bewNzif3y72mwfwlU0y1ts7Xx9fb3gWNNnDDL7IrRVkLIwtuJ2VDoZDpC921/nmVPYXGXt/f9/aLlzH8tWh2x1iF7rD4JuMVNJKHmO9Who7Lp/fZJ7dn30cECZa2NjKKHMDjqsreoB9fHx0sFardTodDtf2MIVSmXui3zGSiW4J+qRotZIBg7JFRw4rWsnXtLIPKdyRla/U0GrqIl0cu1sz4b7MdEX07amJ7oYu3J81mZH8X7rTN+HBvH5P2h9EF5fdCiOolJOGZAuZ6Nb7PgMdzeNdbdYbcPxj3Av3k1L/UfgLJ6HzH7DHA6cAAAAASUVORK5CYII=">
+        </div>
+    </div>
+
+    <!--Dialog-->
+    <div class="xm-dialog" id="JtipsDialog">
+        <!--背景层-->
+        <div class="xm-dialog-bg"></div>
+
+        <!--弹框内容-->
+        <div class="xm-dialog-cont">
+            <div class="xm-title-cont relative text-center">
+                <p class="xm-title">标题</p>
+                <i class="xm-close xm-dialog-close"></i>
+            </div>
+            <div class="xm-title-divider divider divider-horizontal"></div>
+            <!--正文-->
+            <div class="xm-content"></div>
+            <div class="xm-btn-cont">
+                <button class="xm-btn xm-btn-blue sure xm-dialog-close">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 通用状态 -->
+    <div class="xm-common-status" id="Jstatus">
+        <div class="xm-common-status-cont">
+            <img class="xm-common-status-pic" src="" alt="">
+            <p class="xm-common-status-title"></p>
+            <p class="xm-common-status-sub-title"></p>
+            <button class="xm-common-status-btn"></button>
+        </div>
+    </div>
+</body>
+
+<script src="./libs/jquery-2.0.0.min.js"></script>
+<script src="./dist/xmkit.0.1.17.js"></script>
+
+<script>
+    (function () {
+        var w = document.documentElement.offsetWidth > window.screen.width ? window.screen.width : document.documentElement.offsetWidth;
+        if (w < 540) {
+            rem = w * 50 / 540 + "px"
+        } else {
+            rem = "50px"
+        }
+        document.documentElement.style.fontSize = rem;
+        window.addEventListener("resize", arguments.callee, false)
+    })();
+</script>
+
+<script>
+    function testDialog() {
+        xmkit.showDialog('#JtipsDialog', {
+            title: '晚饭吃什么',
+            content: 'M记、牛肉拉面！',
+            sureBtnText: '666',
+            onSureBtnClick: function() {
+                xmkit.hideDialog('#JtipsDialog');
+                xmkit.toast('Go！');
+            }
+        })
+    }
+
+    function testEmptyStatus() {
+        xmkit.showStatusEmpty({
+            selector: '#Jstatus'
+        });
+    }
+
+    function testErrorStatus() {
+        xmkit.showStatusError({
+            selector: '#Jstatus',
+            title: '发生未知错误',
+            subTitle: '请稍候再试',
+            btnText: '重试',
+            callback: function() {
+                xmkit.toast('刷新未知错误~');
+            }
+        });
+    }
+
+    function testNetErrorStatus() {
+        xmkit.showStatusNetError({
+            selector: '#Jstatus',
+            title: '网络错误',
+            subTitle: '请检查网络',
+            btnText: '重试',
+            callback: function() {
+                xmkit.toast('刷新网络错误~');
+            }
+        });
+    }
+
+    function testNormalStatus() {
+        xmkit.showStatusNormal({
+            selector: '#Jstatus',
+        });
+    }
+
+    var binded =function() {
+        console.log('binded');
+    }
+
+    var btnAClick = function() {
+        xmkit.toast('button a clicked');
+        xmkit.unBindEvent({
+            'click #JbtnA': btnAClick
+        })
+    }
+
+    var init =function() {
+        console.log('loaded');
+        xmkit.bindEvent({
+            'click #JbtnA': btnAClick,
+            'click #show-dialog': testDialog
+        })
+    }
+
+    xmkit.init({
+        title: '测试页面',
+        loaded: init,
+        binded: binded,
+        phead: {
+            cversion: 0,
+            pversion: 30
+        }
+    });
+
+</script>
+
+</html>

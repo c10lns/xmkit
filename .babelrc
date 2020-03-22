@@ -1,0 +1,4 @@
+{
+   "presets": ["es2015"], // 需要用到的套件
+   "plugins": ["transform-object-assign"] // 需要用到的插件
+ }

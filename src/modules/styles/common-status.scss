@@ -1,0 +1,50 @@
+.xm-common-status {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: #fff;
+    font-size: 16px;
+
+    .xm-common-status-cont {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        position: fixed;
+        text-align: center;
+        
+        .xm-common-status-pic {
+            width: 130;
+            height: 90;
+        }
+
+        .xm-common-status-title {
+            margin-top: 4px;
+            color: #434343;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .xm-common-status-sub-title {
+            margin-top: 4px;
+            color: #707070;
+            font-size: 12px;
+        }
+
+        .xm-common-status-btn {
+            border: 1px solid #2F8DE1;
+            border-radius: 4px;
+            height: 34px;
+            min-width: 150px;
+            padding: 0 27px;
+            margin-top: 30;
+            color: #2F8DE1;
+            font-size: 12px;
+            background-color: transparent;
+        }
+    }
+}
